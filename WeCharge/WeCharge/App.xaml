@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:CustomControls="clr-namespace:WeCharge.CustomControls"
+             x:Class="WeCharge.App">
+    <Application.Resources>
+        <DataTemplate x:Key="ItemsSearchTemplate">
+            <Grid Padding="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label
+                       Text="{Binding Text}" FontAttributes="Bold"  />
+                <Label Grid.Row="1" 
+                       Text="{Binding Description}" 
+                       />
+            </Grid>
+        </DataTemplate>
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" 
+                    x:Key="FontAwesomeBrands">
+                <On Platform="Android" 
+              Value="FontAwesomeBrands.otf#Regular" />
+                <On Platform="iOS" 
+              Value="Font Awesome 6 Brands" />
+            </OnPlatform>
+
+            <OnPlatform x:TypeArguments="x:String" 
+                    x:Key="FontAwesomeSolid">
+                <On Platform="Android" 
+              Value="FontAwesomeSolid.otf#Solid" />
+                <On Platform="iOS" 
+              Value="Font Awesome 6 Pro" />
+            </OnPlatform>
+
+            <OnPlatform x:TypeArguments="x:String" 
+                    x:Key="FontAwesomeRegular">
+                <On Platform="Android" 
+              Value="FontAwesomeRegular.otf#Regular" />
+                <On Platform="iOS" 
+              Value="Font Awesome 6 Pro" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" 
+                    x:Key="FontAwesomeLight">
+                <On Platform="Android" 
+              Value="FontAwesomeLight.otf#light" />
+                <On Platform="iOS" 
+              Value="Font Awesome 6 Pro" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" 
+                    x:Key="PoppinsRegular">
+                <On Platform="Android" 
+              Value="Poppins-Regular.ttf#Regular" />
+                <On Platform="iOS" 
+              Value="Poppins" />
+            </OnPlatform>
+
+            <!--#region Color-->
+            <Color x:Key="BackgroundColor">#f0f1f3</Color>
+            <Color x:Key="ButtonColor">LightGray</Color>
+            <Color x:Key="ButtonTextColor">Black</Color>
+            <Color x:Key="SuccessButton">Green</Color>
+            <Color x:Key="SuccessButtonText">White</Color>
+            <Color x:Key="ErrorButton">Red</Color>
+            <Color x:Key="EntryLabelColor">#5E6368</Color>
+            <Color x:Key="PopupBorderColor">LightGray</Color>
+            <Color x:Key="HeadingTextColor">Black</Color>
+            <Color x:Key="RegularLabelColor">Black</Color>
+            <Color x:Key="EntryPlaceholderColor">White</Color>
+            <Color x:Key="EntryTextColor">Black</Color>
+            <Color x:Key="PrimaryDotColor">Orange</Color>
+            <Color x:Key="SecondaryDotColor">Green</Color>
+            <Color x:Key="FrameBorderColor">LightGray</Color>
+
+            <Color x:Key="RegularLabelLightColor">#616161</Color>
+            <Color x:Key="ValuesFrameBackgroundColor">White</Color>
+            <Color x:Key="ProgressBarColor">Black</Color>
+
+            <Color x:Key="PrimaryIconTextColor">White</Color>
+            <Color x:Key="SecondaryErrorButtonBackgroundColor">Red</Color>
+            <Color x:Key="PrimaryIconBackgroundColor">Black</Color>
+            <Color x:Key="SecondaryIconTextColor">#000000</Color>
+            <Color x:Key="SecondaryIconBackgroundColor">#D9D9D9</Color>
+            <Color x:Key="ListViewMainTextColor">Black</Color>
+            <Color x:Key="PrimaryRegularButtonColor">Black</Color>
+            <Color x:Key="SecondaryRegularButtonColor">White</Color>
+            <Color
+                   x:Key="CarouselFrameColor">
+                <x:Arguments>
+                    <x:Double>0</x:Double>
+                    <!-- R/255 -->
+                    <x:Double>0</x:Double>
+                    <!-- G/255 -->
+                    <x:Double>0</x:Double>
+                    <!-- B/255 -->
+                    <x:Double>0.8</x:Double>
+                    <!-- A: 0.0-1.0 -->
+                </x:Arguments>
+            </Color>
+
+            <Color
+                   x:Key="PopupOverlayColor">
+                <x:Arguments>
+                    <x:Double>0</x:Double>
+                    <!-- R/255 -->
+                    <x:Double>0</x:Double>
+                    <!-- G/255 -->
+                    <x:Double>0</x:Double>
+                    <!-- B/255 -->
+                    <x:Double>0.6</x:Double>
+                    <!-- A: 0.0-1.0 -->
+                </x:Arguments>
+            </Color>
+            <!--<Color x:Key="CarouselFrameColor">rgba(0,0,0,0.8)</Color>-->
+
+            <!--#endregion-->
+
+            <!--#region Custom Control Styles-->
+            <Style x:Key="LargePrimaryIconButtonStyle" TargetType="CustomControls:IconButton">
+                <Setter Property="LabelTextColor" Value="{DynamicResource PrimaryIconTextColor}"/>
+                <Setter Property="IconTextColor" Value="{DynamicResource PrimaryIconTextColor}"/>
+                <Setter Property="FrameBackgroundColor" Value="{DynamicResource PrimaryIconBackgroundColor}"/>
+                <Setter Property="FontSize" Value="16"/>
+            </Style>
+            <Style x:Key="CarouselFrameStyle" TargetType="Frame">
+                <Setter Property="HasShadow" Value="False"/>
+                <Setter Property="CornerRadius" Value="15"/>
+                <Setter Property="BackgroundColor" Value="{DynamicResource CarouselFrameColor}"/>
+            </Style>
+            <Style x:Key="LargeSecondaryIconButtonStyle" TargetType="CustomControls:IconButton">
+                <Setter Property="LabelTextColor" Value="{DynamicResource SecondaryIconTextColor}"/>
+                <Setter Property="IconTextColor" Value="{DynamicResource SecondaryIconTextColor}"/>
+                <Setter Property="FrameBackgroundColor" Value="{DynamicResource SecondaryIconBackgroundColor}"/>
+                <Setter Property="FontSize" Value="16"/>
+            </Style>
+
+            <Style x:Key="PrimaryIconButtonStyle" TargetType="CustomControls:IconButton">
+                <Setter Property="LabelTextColor" Value="{DynamicResource PrimaryIconTextColor}"/>
+                <Setter Property="IconTextColor" Value="{DynamicResource PrimaryIconTextColor}"/>
+                <Setter Property="FrameBackgroundColor" Value="{DynamicResource PrimaryIconBackgroundColor}"/>
+            </Style>
+            <Style x:Key="SecondaryIconButtonStyle" TargetType="CustomControls:IconButton">
+                <Setter Property="LabelTextColor" Value="{DynamicResource SecondaryIconTextColor}"/>
+                <Setter Property="IconTextColor" Value="{DynamicResource SecondaryIconTextColor}"/>
+                <Setter Property="FrameBackgroundColor" Value="{DynamicResource SecondaryIconBackgroundColor}"/>
+            </Style>
+            <!--#region-->
+
+            <!--#region Frame Styles-->
+            <Style x:Key="ValuesFrameStyle" TargetType="Frame">
+                <Setter Property="Padding" Value="15"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="BackgroundColor" Value="{DynamicResource ValuesFrameBackgroundColor}"/>
+                <Setter Property="HasShadow" Value="False"/>
+                <Setter Property="VerticalOptions" Value="Start"/>
+            </Style>
+            <Style x:Key="SetCostFrameStyle" TargetType="Frame">
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="Margin" Value="5,0"/>
+                <Setter Property="BorderColor" Value="LightGray"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="HasShadow" Value="False"/>
+            </Style>
+            <Style x:Key="FilterPopupFrame" TargetType="Frame">
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="WidthRequest" Value="400"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColor}"/>
+                <Setter Property="HeightRequest" Value="580"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="BackgroundColor" Value="LightGray"/>
+                <Setter Property="HasShadow" Value="False"/>
+                <Setter Property="VerticalOptions" Value="Start"/>
+            </Style>
+            <!--#endregion-->
+            <!--#region-->
+            <Style x:Key="PopupStyle" TargetType="Frame">
+                <Setter Property="BorderColor" Value="{StaticResource PopupBorderColor}"/>
+                <Setter Property="BackgroundColor" Value="{DynamicResource FilterPopupFrame}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="HasShadow" Value="False"/>
+            </Style>
+            <!--#endregion-->
+            <!--#region Label Styles-->
+
+
+            <Style x:Key="IconLabelSolid" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource FontAwesomeSolid}"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="12"/>
+            </Style>
+
+            <Style x:Key="IconLabelBrands" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource FontAwesomeBrands}"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+            <Style x:Key="IconLabelLight" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource FontAwesomeLight}"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+
+            <Style x:Key="IconLabelRegular" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource FontAwesomeRegular}"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="12"/>
+            </Style>
+
+            <Style x:Key="IconButtonLabel" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource FontAwesomeRegular}"/>
+                <Setter Property="FontSize" Value="12"/>
+            </Style>
+
+            <Style x:Key="HeadingText" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource HeadingTextColor}" />
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsRegular}"/>
+                <Setter Property="FontSize" Value="16"/>
+            </Style>
+
+            <Style x:Key="RegularLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource RegularLabelColor}" />
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsRegular}"/>
+                <Setter Property="FontSize" Value="12"/>
+            </Style>
+            <Style x:Key="PopupLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#616161"/>
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsRegular}"/>
+                <Setter Property="FontSize" Value="12"/>
+            </Style>
+
+            <Style x:Key="RegularLabelLightStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource RegularLabelLightColor}" />
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsRegular}"/>
+                <Setter Property="FontSize" Value="12"/>
+            </Style>
+
+
+
+            <Style x:Key="EntryLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource EntryLabelColor}" />
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsRegular}"/>
+                <Setter Property="FontSize" Value="12"/>
+            </Style>
+
+
+
+            <!--#endregion-->
+
+            <!--#region Shell Style-->
+            <Style
+       x:Key="FlyoutStyle" TargetType="Shell">
+                <Setter Property="Shell.ForegroundColor" Value="Black" />
+                <Setter Property="Shell.UnselectedColor" Value="#848484" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="Black" />
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#848484" />
+                <Setter Property="Shell.TabBarTitleColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="Black" />
+            </Style>
+            <!--#endregion-->
+
+            <!--#region Buttons Style-->
+
+            <Style x:Key="RegularButtonStyle" TargetType="Button">
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsRegular}"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="BackgroundColor" Value="LightGray" />
+            </Style>
+            <Style x:Key="PrimaryRegularButtonStyle" TargetType="Button">
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="BorderColor" Value="Black"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsRegular}"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryRegularButtonColor}" />
+            </Style>
+            <Style x:Key="SecondaryRegularButtonStyle" TargetType="Button">
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="BorderColor" Value="LightGray"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsRegular}"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColor}" />
+            </Style>
+            <Style x:Key="ErrorButtonStyle" TargetType="Button">
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="BorderColor" Value="Red"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="TextColor" Value="Red" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsRegular}"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="BackgroundColor" Value="{DynamicResource BackgroundColor}" />
+            </Style>
+            <Style x:Key="SecondaryErrorButtonStyle" TargetType="Button">
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="BorderColor" Value="Red"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsRegular}"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryErrorButtonBackgroundColor}" />
+            </Style>
+
+            <Style x:Key="ButtonPrimary" TargetType="Button">
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsRegular}"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="BackgroundColor" Value="{StaticResource ButtonColor}" />
+            </Style>
+            <Style x:Key="ButtonSecondary" TargetType="Button">
+                <Setter Property="Padding" Value="10,0"/>
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsRegular}"/>
+                <Setter Property="BorderColor" Value="LightGray" />
+                <Setter Property="TextColor" Value="#646464" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColor}" />
+            </Style>
+
+            <!--#endregion-->
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

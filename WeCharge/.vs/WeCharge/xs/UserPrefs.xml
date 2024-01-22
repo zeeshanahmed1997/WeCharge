@@ -1,0 +1,53 @@
+﻿<Properties StartupConfiguration="{C75D8AF4-46ED-4FDC-A0C1-1D78F57E5D28}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WeCharge/ViewModels/Charge/StartYourChargePageViewModel.cs">
+    <Files>
+      <File FileName="WeCharge/Views/MakeBooking/CheckAvailabilityPage.xaml" />
+      <File FileName="WeCharge/Views/MakeBooking/CheckAvailabilityPage.xaml.cs" />
+      <File FileName="WeCharge/ViewModels/Charge/StartYourChargePageViewModel.cs" Line="93" Column="80" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WeCharge" expanded="True">
+            <Node name="WeCharge">
+              <Node name="ViewModels">
+                <Node name="Charge">
+                  <Node name="StartYourChargePageViewModel.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="MakeBooking" expanded="True">
+                  <Node name="CheckAvailabilityPage.xaml" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="AppShell.xaml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge/ViewModels/Accounts/ForgetPasswordViewModel.cs" relfile="WeCharge/ViewModels/Accounts/ForgetPasswordViewModel.cs" line="128" column="1" />
+      <Breakpoint file="/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge/APIServices/Authentication/AuthenticationService.cs" relfile="WeCharge/APIServices/Authentication/AuthenticationService.cs" line="56" column="1" />
+      <Breakpoint file="/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge/APIServices/Bookings/BookingService.cs" relfile="WeCharge/APIServices/Bookings/BookingService.cs" line="126" column="1" />
+      <Breakpoint file="/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge/ViewModels/Charge/ChargedPageViewModel.cs" relfile="WeCharge/ViewModels/Charge/ChargedPageViewModel.cs" line="81" column="1" />
+      <Breakpoint file="/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge/ViewModels/HomePageViewModel.cs" relfile="WeCharge/ViewModels/HomePageViewModel.cs" line="469" column="1" />
+      <Breakpoint file="/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge/ViewModels/Charge/ChargeEstimatePageViewModel.cs" relfile="WeCharge/ViewModels/Charge/ChargeEstimatePageViewModel.cs" line="282" column="1" />
+      <Breakpoint file="/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge/ViewModels/Charge/ChargeEstimatePageViewModel.cs" relfile="WeCharge/ViewModels/Charge/ChargeEstimatePageViewModel.cs" line="294" column="1" />
+      <Breakpoint file="/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge/ViewModels/Charge/ChargeEstimatePageViewModel.cs" relfile="WeCharge/ViewModels/Charge/ChargeEstimatePageViewModel.cs" line="374" column="1" />
+      <Breakpoint file="/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/Services/CalendarService.cs" relfile="WeCharge.iOS/Services/CalendarService.cs" line="31" column="1" />
+      <Breakpoint file="/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/Services/CalendarService.cs" relfile="WeCharge.iOS/Services/CalendarService.cs" line="25" column="1" />
+      <Breakpoint file="/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge/Views/Connect/ConnectVehiclePage.xaml.cs" relfile="WeCharge/Views/Connect/ConnectVehiclePage.xaml.cs" line="43" column="1" />
+      <Breakpoint file="/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge/Views/Connect/ConnectVehiclePage.xaml.cs" relfile="WeCharge/Views/Connect/ConnectVehiclePage.xaml.cs" line="51" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.WeCharge.Android Xamarin.HotReload.WrongLinkerErrorInfoBar.WeCharge.Android.HideInfoBar="True" AndroidDesignerPreferredTheme="MainTheme" PreferredExecutionTarget="Android.Pixel_3a_API_34_extension_level_7_x86_64" />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.2.2.0" />
+  <MonoDevelop.Ide.ItemProperties.WeCharge.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.Generic" Xamarin.HotReload.WrongLinkerErrorInfoBar.WeCharge.iOS.HideInfoBar="True" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.Pixel_3a_API_34_extension_level_7_x86_64" />
+  <MultiItemStartupConfigurations />
+</Properties>

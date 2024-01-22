@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"    
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"    
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+               xmlns:local="clr-namespace:WeCharge.CustomControls"
+    xmlns:theme="clr-namespace:WeCharge.Theme"
+    xmlns:resx="clr-namespace:WeCharge.Resources"
+  
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"       
+             x:Class="WeCharge.Views.CarousalPage">
+    <ContentPage.Content>
+        <StackLayout Margin="20" BackgroundColor="blue">
+            <Label Text="Hello World" FontSize="50"/>
+            <CarouselView  Margin="20" BackgroundColor="red" ItemsSource="{Binding CarouselItems}" VerticalOptions="End">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnDefinitions="auto,auto" RowDefinitions="auto,auto,auto,auto,auto" VerticalOptions="EndAndExpand" BackgroundColor="Transparent">
+                            <Frame BorderColor="Gray" BackgroundColor="LightGray" Margin="8,140,8,0" HasShadow="False" CornerRadius="20" VerticalOptions="EndAndExpand">
+                                <StackLayout>
+                                    <Grid ColumnDefinitions="*,*">
+                                        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Location}"   Style="{StaticResource RegularLabelStyle}" TextColor="{StaticResource EntryPlaceholderColor}" VerticalOptions="Center"  FontSize="14"/>
+                                        <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Address}"  HorizontalOptions="StartAndExpand" TextColor="{StaticResource EntryPlaceholderColor}" VerticalOptions="Center" Style="{StaticResource RegularLabelLightStyle}" />
+                                        <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding PostCode}" Style="{StaticResource RegularLabelLightStyle}" TextColor="{StaticResource EntryPlaceholderColor}" VerticalOptions="Center"  />
+                                        <Label Grid.Row="3" Grid.Column="0" Text="{Binding Source={x:Static theme:FontIcons.Charging}}" Style="{StaticResource IconLabelLight}" TextColor="{StaticResource EntryPlaceholderColor}" VerticalOptions="Center" />
+                                        <Label Grid.Row="3" Grid.Column="0" HorizontalOptions="Center" Text="{Binding LevelInfo}"  Style="{StaticResource RegularLabelLightStyle}" TextColor="{StaticResource EntryPlaceholderColor}" VerticalOptions="Center"  />
+                                        <!--#endregion-->
+                                        <!--region Second Grid -->
+                                        <Grid Grid.Column="1"  HorizontalOptions="End" RowDefinitions="auto,auto" ColumnDefinitions="auto">
+                                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding Distance}" Style="{StaticResource RegularLabelLightStyle}" TextColor="{StaticResource EntryPlaceholderColor}" HorizontalTextAlignment="End" />
+                                            <Label  Grid.Row="1" Grid.Column="0" Text="{Binding Time}" Style="{StaticResource RegularLabelLightStyle}" TextColor="{StaticResource EntryPlaceholderColor}" HorizontalOptions="End"/>
+                                        </Grid>
+                                        <!--#endregion-->
+                                    </Grid>
+                                    <Button Grid.Row="4"  Style="{StaticResource SecondaryRegularButtonStyle}" Text="{Binding Source={x:Static resx:AppLanguage.CheckAvailability}}" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" />
+
+                                </StackLayout>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>  

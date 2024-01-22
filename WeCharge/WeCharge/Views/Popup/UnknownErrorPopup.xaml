@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                  x:Class="WeCharge.Views.Popup.UnknownErrorPopup"
+                     xmlns:resx="clr-namespace:WeCharge.Resources"
+                  xmlns:theme="clr-namespace:WeCharge.Theme"
+                 xmlns:local="clr-namespace:WeCharge.CustomControls"
+                  BackgroundColor="Transparent"
+                  Padding="20"
+                  HasSystemPadding="True">
+    <StackLayout Padding="20,0" BackgroundColor="{StaticResource PopupOverlayColor}">
+        <Frame Style="{StaticResource PopupStyle}"
+           VerticalOptions="CenterAndExpand"
+           HorizontalOptions="Center">
+            <StackLayout>
+                <Label Margin="0,0,0,0" FontSize="150" TextColor="Black" Text="{Binding Source={x:Static theme:FontIcons.TriangleExclamation}}" Style="{StaticResource IconLabelRegular}" HorizontalOptions="CenterAndExpand"/>
+                <Label Margin="0,20,0,0" Text="{Binding Source={x:Static resx:AppLanguage.UnknownError}}" Style="{StaticResource HeadingText}" FontSize="20" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                <Label Margin="0,20,0,0" FontSize="16" Style="{StaticResource RegularLabelStyle}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Text="{Binding Source={x:Static resx:AppLanguage.UnknowErrorPopupText}}"/>
+                <Grid HorizontalOptions="FillAndExpand" Margin="0,20" VerticalOptions="EndAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="0" x:Name="TryAgain" Text="{Binding Source={x:Static resx:AppLanguage.TryAgain}}" Style="{StaticResource RegularButtonStyle}" FontSize="16" BackgroundColor="Black" TextColor="White" HorizontalOptions="FillAndExpand"/>
+                    <Button Grid.Row="1" x:Name="ContactSupport" Text="{Binding Source={x:Static resx:AppLanguage.ContactSupport}}" Style="{StaticResource ErrorButtonStyle}" BackgroundColor="{StaticResource EntryPlaceholderColor}" FontSize="16" HorizontalOptions="FillAndExpand"/>
+                </Grid>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</pages:PopupPage>

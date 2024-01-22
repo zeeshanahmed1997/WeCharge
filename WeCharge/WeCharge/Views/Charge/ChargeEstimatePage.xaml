@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:resx="clr-namespace:WeCharge.Resources"
+        xmlns:theme="clr-namespace:WeCharge.Theme"
+      xmlns:local="clr-namespace:WeCharge.CustomControls"
+      Title="Start your charge"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="WeCharge.Views.Charge.ChargeEstimatePage"
+    BackgroundColor="{StaticResource BackgroundColor}">
+    <ContentPage.Content>
+        <ScrollView Margin="20" VerticalScrollBarVisibility="Never">
+            <StackLayout>
+                <StackLayout Margin="20,10,20,10" HorizontalOptions="FillAndExpand">
+                    <Label
+                Text="{Binding ChargingSummary}"
+                Style="{StaticResource RegularLabelLightStyle}"
+                FontSize="14"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="FillAndExpand"
+            />
+                </StackLayout>
+                <StackLayout Margin="90,10" HorizontalOptions="FillAndExpand">
+                    <Button Text="Rate: $2.50/kWh" TextColor="White" BackgroundColor="Black" BorderWidth="1" CornerRadius="10" HeightRequest="50" FontFamily="PoppinsRegular" FontSize="16" BorderColor="LightGray" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                <Frame Padding="20" BackgroundColor="White" HorizontalOptions="FillAndExpand" HasShadow="False" BorderColor="LightGray">
+                    <StackLayout>
+                        <StackLayout HorizontalOptions="FillAndExpand">
+                            <Label
+                        Text="{Binding Source={x:Static resx:AppLanguage.Estimate}}"
+                        FontSize="20"
+                        FontFamily="PoppinsRegular"
+                        Style="{StaticResource HeadingText}"
+                        TextDecorations="Underline"
+                        HorizontalTextAlignment="Center"
+                        HorizontalOptions="FillAndExpand"
+                    />
+                            <Grid Padding="30,10,30,0" HorizontalOptions="CenterAndExpand">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding Source={x:Static theme:FontIcons.Charging}}" VerticalTextAlignment="Center" Style="{StaticResource IconLabelLight}" />
+                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding Source={x:Static resx:AppLanguage.EnergyRequired}}" FontSize="14" Style="{StaticResource RegularLabelStyle}" />
+                                <Label Grid.Row="0" Grid.Column="2" Text="{Binding EnergyRequired}" FontSize="14" Style="{StaticResource EntryLabelStyle}" />
+                                <Label Grid.Row="1" Grid.Column="0" Text="{Binding Source={x:Static theme:FontIcons.SquareDollar}}" VerticalTextAlignment="Center" Style="{StaticResource IconLabelLight}" />
+                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding Source={x:Static resx:AppLanguage.TotalCost}}" FontSize="14" Style="{StaticResource RegularLabelStyle}" />
+                                <Label Grid.Row="1" Grid.Column="2" Text="{Binding TotalCost}" FontSize="14" Style="{StaticResource EntryLabelStyle}" />
+                                <Label Grid.Row="2" Grid.Column="0" Text="{Binding Source={x:Static theme:FontIcons.Clock}}" VerticalTextAlignment="Center" Style="{StaticResource IconLabelLight}" />
+                                <Label Grid.Row="2" Grid.Column="1" Text="{Binding Source={x:Static resx:AppLanguage.Time}}" FontSize="14" Style="{StaticResource RegularLabelStyle}" />
+                                <Label Grid.Row="2" Grid.Column="2" Text="{Binding Time}" FontSize="14" Style="{StaticResource EntryLabelStyle}" />
+
+                            </Grid>
+                        </StackLayout>
+
+                  
+                        <StackLayout Padding="0,0,0,15" Orientation="Horizontal">
+                            <Label Text="{Binding Source={x:Static theme:FontIcons.CircleInfo}}" FontSize="12" TextColor="Gray" Style="{StaticResource IconLabelLight}" />
+                            <Label Text="{Binding Source={x:Static resx:AppLanguage.VehicleCostNote}}"  Style="{StaticResource RegularLabelLightStyle}" />
+
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <Frame x:Name="SetChargeCost" BackgroundColor="White" IsVisible="false" Margin="0,10,0,0" Padding="20,20" HorizontalOptions="FillAndExpand" HasShadow="False" BorderColor="LightGray">
+                    <StackLayout>
+                        <StackLayout HorizontalOptions="FillAndExpand">
+                            <Label
+                        Text="{Binding Source={x:Static resx:AppLanguage.PresetChargeCost}}"
+                        FontSize="16"
+                        FontFamily="PoppinsRegular"
+                        Style="{StaticResource HeadingText}"
+                        TextDecorations="Underline"
+                        HorizontalTextAlignment="Center"
+                        HorizontalOptions="FillAndExpand"
+                    />
+                            <Grid Padding="0,10" HorizontalOptions="CenterAndExpand">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Button Grid.Row="0" Grid.Column="0" Command="{Binding ButtonClickedCommand}" CommandParameter="$20" Padding="15,0" HorizontalOptions="StartAndExpand" Text="$20" BackgroundColor="{Binding ButtonBackgroundColor20}" FontSize="14" Style="{StaticResource ButtonSecondary}" />
+
+                                <Button Grid.Row="0" Grid.Column="1" Command="{Binding ButtonClickedCommand}" CommandParameter="$30" Padding="15,0"  HorizontalOptions="CenterAndExpand" Text="$30" BackgroundColor="{Binding ButtonBackgroundColor30}" FontSize="14" Style="{StaticResource ButtonSecondary}" />
+
+                                <Button Grid.Row="0" Grid.Column="2" Command="{Binding ButtonClickedCommand}" CommandParameter="$40" Padding="15,0" HorizontalOptions="EndAndExpand" Text="$40" BackgroundColor="{Binding ButtonBackgroundColor40}" FontSize="14" Style="{StaticResource ButtonSecondary}" />
+
+                                <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,10,0,0" Text="{Binding Source={x:Static resx:AppLanguage.OtherAmount}}" Style="{StaticResource EntryLabelStyle}" HorizontalOptions="Start" />
+                                <Frame Grid.Row="2" Grid.Column="0"  HasShadow="False" Grid.ColumnSpan="3" BackgroundColor="{StaticResource ValuesFrameBackgroundColor}" BorderColor="LightGray" CornerRadius="5" Padding="0">
+                                    <local:CustomEntrySecondary x:Name="OtherAmount" Keyboard="Numeric" HeightRequest="50" PlaceholderColor="{StaticResource EntryPlaceholderColor}" TextColor="{StaticResource EntryTextColor}" TextChanged="OtherAmount_TextChanged"
+                                    BackgroundColor="{StaticResource EntryPlaceholderColor}" HorizontalOptions="FillAndExpand" Text="{Binding OtherAmount}"  IsEnabled="{Binding OtherAmountEnable}"/>
+                                </Frame>
+
+                            </Grid>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <StackLayout HorizontalOptions="FillAndExpand" Padding="0,0" VerticalOptions="EndAndExpand">
+                    <local:IconButton Padding="0,10" Grid.Row="0" HeightRequest="50" Style="{StaticResource LargePrimaryIconButtonStyle}" LabelIconStyle="{StaticResource IconLabelLight}" TitleText="{Binding Source={x:Static resx:AppLanguage.StartCharging}}" Command="{Binding StartChargingButtonClicked}" FontSize="16" IconText="{Binding Source={x:Static theme:FontIcons.BoltLightening}}" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                  x:Class="WeCharge.Views.Popup.GoBackPopup"
+                     xmlns:resx="clr-namespace:WeCharge.Resources"
+                  xmlns:theme="clr-namespace:WeCharge.Theme"
+                 xmlns:local="clr-namespace:WeCharge.CustomControls"
+                  BackgroundColor="Transparent">
+    <StackLayout Margin="0,0,0,0" BackgroundColor="{StaticResource PopupOverlayColor}">
+        <Frame VerticalOptions="EndAndExpand" Style="{StaticResource PopupStyle}"
+           HorizontalOptions="Center">
+            <StackLayout>
+                <Grid ColumnDefinitions="*,auto,auto" RowDefinitions="auto,auto,auto">
+                    <Label Grid.Row="0" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center" TextColor="{StaticResource EntryTextColor}" Text="{Binding Source={x:Static theme:FontIcons.Exit}}" FontSize="16" Style="{StaticResource IconLabelRegular}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ExitIconTapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Source={x:Static resx:AppLanguage.GoBackPrompt}}" Style="{StaticResource HeadingText}" FontSize="16" VerticalOptions="Center" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                    <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" FontSize="14" Style="{StaticResource PopupLabelStyle}" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Center" Text="We can’t ensure to get back the same slot if you cancel your booking now."/>
+                    <local:IconButton Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,0,0,20" LabelTextColor="Black" IconTextColor="Green" HorizontalOptions="FillAndExpand" Style="{StaticResource PrimaryIconButtonStyle}" FrameBorderColor="Green" FrameBackgroundColor="White" FrameHeight="15" TitleText="{Binding ChargeDate}" LabelIconStyle="{StaticResource IconLabelLight}" IconText="{Binding Source={x:Static theme:FontIcons.ClockLeft}}"/>
+                </Grid>
+                <Grid HorizontalOptions="FillAndExpand" Margin="0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" x:Name="ContinueBooking" Text="{Binding Source={x:Static resx:AppLanguage.ContinueBooking}}" Style="{StaticResource PrimaryRegularButtonStyle}"  FontSize="16" Clicked="ContinueClicked" HorizontalOptions="FillAndExpand"/>
+                    <Button Grid.Column="1" x:Name="CancelBooking" Text="{Binding Source={x:Static resx:AppLanguage.CancelBooking}}" Style="{StaticResource ErrorButtonStyle}" Background="White"  FontSize="16" HorizontalOptions="FillAndExpand" Clicked="CancelButtonClicked"/>
+                </Grid>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</pages:PopupPage>

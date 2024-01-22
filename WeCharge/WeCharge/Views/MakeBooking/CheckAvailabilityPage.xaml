@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:WeCharge.CustomControls"
+    xmlns:theme="clr-namespace:WeCharge.Theme"
+    xmlns:resx="clr-namespace:WeCharge.Resources" xmlns:wecharge="clr-namespace:WeCharge"
+    x:Class="WeCharge.Views.MakeBooking.CheckAvailabilityPage"
+    Title="Check Availability"
+    BackgroundColor="{StaticResource BackgroundColor}">
+    <ContentPage.Content>
+        <ScrollView Padding="0,10">
+            <Grid>
+                <StackLayout Margin="0,0,0,20">
+                    <Frame Style="{StaticResource ValuesFrameStyle}" Margin="20,10">
+
+                        <Grid ColumnDefinitions="*,auto">
+                            <StackLayout Grid.Column="0" >
+                                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"  Text="{Binding LocationName}" Style="{StaticResource RegularLabelStyle}" FontSize="14"/>
+                                <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"  Text="{Binding LocationAddress}" HorizontalOptions="StartAndExpand" Style="{StaticResource RegularLabelLightStyle}" />
+                                <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LocationCity}" Style="{StaticResource RegularLabelLightStyle}" />
+                            </StackLayout>
+                            <!--#endregion-->
+                            <!--region Second Grid -->
+                            <Grid Grid.Column="1"  HorizontalOptions="End" RowDefinitions="auto,auto,*" RowSpacing="0" ColumnDefinitions="auto">
+                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding LocationInfo}" Style="{StaticResource RegularLabelLightStyle}" HorizontalTextAlignment="End" />
+                                <Label  Grid.Row="1" Grid.Column="0" Text="{Binding Time}" Style="{StaticResource RegularLabelLightStyle}" HorizontalOptions="End"/>
+                                <local:IconButton 
+                                        Grid.Row="2" 
+                                        Grid.Column="0" 
+                                        Style="{StaticResource PrimaryIconButtonStyle}" 
+                                        LabelTextColor="{DynamicResource RegularLabelLightColor}" 
+                                        LabelIconColor="{Binding LabelIconColor}" 
+                                        FrameBackgroundColor="#EEEEEE" 
+                                        FrameHeight="20" 
+                                        TitleText="{Binding TitleText}" 
+                                        LabelIconStyle="{StaticResource IconLabelSolid}" 
+                                        IconText="{Binding Source={x:Static theme:FontIcons.Circle}}" 
+                                        CornerRadius="15" 
+                                        VerticalOptions="EndAndExpand" 
+                                        HorizontalOptions="End"/>
+
+                            </Grid>
+                            <!--#endregion-->
+                        </Grid>
+                    </Frame>
+
+                    <Frame Style="{StaticResource ValuesFrameStyle}" Margin="20,10,20,0" HasShadow="False">
+                        <StackLayout HorizontalOptions="FillAndExpand">
+                            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                                <Label Margin="5,0,0,0" Text="{Binding Source={x:Static resx:AppLanguage.Date}}" Style="{StaticResource EntryLabelStyle}" HorizontalOptions="StartAndExpand" />
+                                <Grid ColumnDefinitions="Auto,*,*">
+                                    <wecharge:CustomDatePicker
+                                    x:Name="DatePicker"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="3"
+                            Date="{Binding SelectedDate}"
+                            HorizontalOptions="FillAndExpand"
+                            FontSize="14"
+                                                TextColor="{StaticResource RegularLabelColor }"
+                                                BackgroundColor="{StaticResource BackgroundColor}"
+                                                HeightRequest="40"/>
+                                    <Label Grid.Column="3" Margin="0,15,10,0" HorizontalOptions="EndAndExpand"  Text="{Binding Source={x:Static theme:FontIcons.Calendar}}" Style="{StaticResource IconLabelLight}">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="DatePickerTapped"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </Grid>
+                            </StackLayout>
+
+                            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                                <Label Margin="5,0,0,0" Text="{Binding Source={x:Static resx:AppLanguage.Duration}}" Style="{StaticResource EntryLabelStyle}" HorizontalOptions="StartAndExpand" />
+                                <Grid ColumnDefinitions="Auto,*,*">
+                                    <wecharge:CustomPicker x:Name="DurationPicker"
+                                    Grid.Column="1"
+                                    Grid.ColumnSpan="3"
+                                    SelectedIndexChanged="DurationPicker_SelectedIndexChanged"
+                                    SelectedIndex="{Binding DurationSelectedIndex}"
+                                    BorderColor="{Binding DurationBorderColor}"
+                                    ItemsSource="{Binding DurationItems}"
+                                    HorizontalOptions="FillAndExpand"
+                                    FontSize="14"                
+                                    TextColor="{StaticResource RegularLabelColor }"
+                                    BackgroundColor="{StaticResource BackgroundColor}"
+                                    HeightRequest="40"/>
+                                    <Label Grid.Column="3" Margin="0,15,10,0" HorizontalOptions="EndAndExpand"  Text="{Binding Source={x:Static theme:FontIcons.AngleDown}}" Style="{StaticResource IconLabelLight}">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </Grid>
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                                <Label Margin="5,0,0,0" Text="{Binding Source={x:Static resx:AppLanguage.AvailableSlot}}" Style="{StaticResource EntryLabelStyle}" HorizontalOptions="StartAndExpand" />
+                                <Grid ColumnDefinitions="Auto,*,*">
+                                    <wecharge:CustomPicker
+                                    x:Name="AvailableSlotPicker"
+                                    Grid.Column="1"
+                                    Grid.ColumnSpan="3"
+                                    SelectedIndex="{Binding AvailableSlotSelectedIndex}"
+                                    ItemsSource="{Binding AvailableSlotItems}"
+                                    BorderColor="{Binding AvailableSlotBorderColor}"
+                                    HorizontalOptions="FillAndExpand"
+                                    FontSize="14"
+                                    IsEnabled="{Binding SlotPickerEnable}"
+                                    TextColor="{StaticResource RegularLabelColor }"
+                                    BackgroundColor="{StaticResource BackgroundColor}"
+                                    HeightRequest="40"/>
+                                    <Label Grid.Column="3" Margin="0,15,10,0" HorizontalOptions="EndAndExpand"  Text="{Binding Source={x:Static theme:FontIcons.AngleDown}}" Style="{StaticResource IconLabelLight}"/>
+                                </Grid>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                    <Grid HorizontalOptions="FillAndExpand" Padding="20,0" VerticalOptions="EndAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Button Grid.Row="0" x:Name="BookSpace" Style="{StaticResource PrimaryRegularButtonStyle}" Command="{Binding BookSpaceClicked}" Text="{Binding Source={x:Static resx:AppLanguage.BookSpace}}" IsEnabled="{Binding IsButtonEnable}" FontSize="16"  HorizontalOptions="FillAndExpand"/>
+                        <Button Grid.Row="1" x:Name="Reset" Text="{Binding Source={x:Static resx:AppLanguage.Reset}}" Clicked="ResetButtonClicked" Style="{StaticResource SecondaryRegularButtonStyle}" FontSize="16"  HorizontalOptions="FillAndExpand"/>
+
+                    </Grid>
+                </StackLayout>
+                <ActivityIndicator x:Name="ActivityIndicator" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" Color="{StaticResource ProgressBarColor}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+

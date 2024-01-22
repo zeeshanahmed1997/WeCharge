@@ -1,0 +1,44 @@
+﻿            <Button Grid.Row="3" Command="{Binding SubmitLoginCommand}" Text="Login" BorderWidth="2" TextColor="Black"  
+                    FontAttributes="Bold" FontSize="Small" HorizontalOptions="FillAndExpand"  
+                    BackgroundColor="{StaticResource ButtonColor}"/>
+
+            <Button Grid.Row="4" Command="{Binding SubmitSignupCommand}" Text="New Member? Signup" BorderWidth="2" BorderColor="LightGray" TextColor="Black"  
+                    FontSize="Small" HorizontalOptions="FillAndExpand"  
+                    BackgroundColor="{StaticResource BackgroundColor}" />
+
+
+
+
+
+
+
+            <local:CustomIconButtons>
+            <local:CustomIconButtons.FrameContent>
+                <!-- Your custom content here -->
+                <local:CustomIconButtons LabelText="Label Inside the Frame">
+                <Label Text="Custom Frame Content" />
+                    </local:CustomIconButtons>
+            </local:CustomIconButtons.FrameContent>
+   </local:CustomIconButtons>
+
+
+    <TabBar>
+        <Tab Title="Login">
+            <ShellContent ContentTemplate="{DataTemplate login:LoginPage}" />
+        </Tab>
+        <Tab Title="Register">
+            <ShellContent ContentTemplate="{DataTemplate signup:RegisterPage}" />
+        </Tab>
+        <Tab Title="UpComing Bookings">
+            <ShellContent ContentTemplate="{DataTemplate sidemenu:UpcomingBookings}" />
+        </Tab>
+                <Tab Title="Make a Booking">
+            <ShellContent ContentTemplate="{DataTemplate sidemenu:MakeBooking}" />
+        </Tab>
+        <Tab Title="Previous Charges">
+            <ShellContent ContentTemplate="{DataTemplate sidemenu:PreviousCharges}" />
+        </Tab>
+        <Tab Title="Update Profile">
+            <ShellContent ContentTemplate="{DataTemplate sidemenu:UpdateProfile}" />
+        </Tab>
+    </TabBar>

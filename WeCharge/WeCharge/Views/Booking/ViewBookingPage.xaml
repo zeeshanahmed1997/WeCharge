@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:local="clr-namespace:WeCharge.CustomControls"
+    xmlns:theme="clr-namespace:WeCharge.Theme"
+        xmlns:resx="clr-namespace:WeCharge.Resources"
+        Title="Upcoming Booking"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="{StaticResource BackgroundColor}"
+    x:Class="WeCharge.Views.Booking.ViewBookingPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20,20,20,0">
+                <Label Style="{StaticResource EntryLabelStyle}" Text="{Binding BookingID}"/>
+                <Frame Style="{StaticResource ValuesFrameStyle}" Margin="0,10">
+                    <Grid ColumnDefinitions="*,auto">
+                        <StackLayout Grid.Column="0" >
+                            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"  Text="{Binding LocationName}" Style="{StaticResource RegularLabelStyle}" FontSize="14"/>
+                            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"  Text="{Binding LocationAddress}" HorizontalOptions="StartAndExpand" Style="{StaticResource RegularLabelLightStyle}" />
+                            <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LocationCity}" Style="{StaticResource RegularLabelLightStyle}" />
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="1" Margin="0,10" Style="{StaticResource ValuesFrameStyle}">
+                    <Grid VerticalOptions="Center" RowDefinitions="auto,auto,auto" ColumnDefinitions="auto,*">
+                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding BookingDate}" Style="{StaticResource RegularLabelStyle}"/>
+                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding Source={x:Static theme:FontIcons.Calendar}}" Style="{StaticResource IconLabelLight}"/>
+                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding BookingLocation}" Style="{StaticResource RegularLabelStyle}"/>
+                        <Label Grid.Row="1" Grid.Column="0" Text="{Binding Source={x:Static theme:FontIcons.Location}}" Style="{StaticResource IconLabelLight}"/>
+                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding BookingTime}" Style="{StaticResource RegularLabelStyle}"/>
+                        <Label Grid.Row="2" Grid.Column="0" Text="{Binding Source={x:Static theme:FontIcons.Time}}" Style="{StaticResource IconLabelLight}"/>
+                    </Grid>
+                </Frame>
+                <Grid ColumnDefinitions="*,*" Margin="0,10">
+                    <local:IconButton Grid.Column="0" Style="{StaticResource SecondaryIconButtonStyle}" FontSize="16" HeightRequest="50" TitleText="Get Directions" Command="{Binding GetDirectionsCommand}"  IconText="{Binding Source={x:Static theme:FontIcons.Direction}}" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"/>
+                    <local:IconButton Grid.Column="1" Style="{StaticResource SecondaryIconButtonStyle}" FontSize="16" HeightRequest="50" TitleText="Add to Calendar" IconText="{Binding Source={x:Static theme:FontIcons.AddToCalendar}}" Command="{Binding AddToCalendarCommand}" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"/>
+                </Grid>
+                <Grid x:Name="calendarEventGrid" BackgroundColor="Green" IsVisible="{Binding IsCalenderEventStore}">
+                    <Label Text="{Binding Source={x:Static resx:AppLanguage.EventAdded}}" TextColor="White" FontSize="16" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="{Binding IsCalenderEventStore}" Margin="0,10"/>
+                </Grid>
+                <StackLayout VerticalOptions="EndAndExpand">
+                    <local:IconButton Grid.Column="0" Style="{StaticResource PrimaryIconButtonStyle}" HeightRequest="50" TitleText="Start Charging" FontSize="16" Command="{Binding StartChargeCommand}" IconText="{Binding Source={x:Static theme:FontIcons.BoltLightening}}" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"/>
+                    <local:IconButton Grid.Column="1" Style="{StaticResource SecondaryIconButtonStyle}" FrameBackgroundColor="{StaticResource BackgroundColor}" UnderlineLabelText="True" FontSize="16" HeightRequest="50" TitleText="Edit Booking" IconText="{Binding Source={x:Static theme:FontIcons.Pencil}}" Command="{Binding EditBookingCommand}" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+

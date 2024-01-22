@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                  x:Class="WeCharge.Views.Popup.ProfileUpdatedPopup"
+                     xmlns:resx="clr-namespace:WeCharge.Resources"
+                  xmlns:theme="clr-namespace:WeCharge.Theme"
+                 xmlns:local="clr-namespace:WeCharge.CustomControls"
+                  BackgroundColor="Transparent"
+                  Padding="20"
+                  HasSystemPadding="True">
+    <StackLayout Padding="20,0" BackgroundColor="{StaticResource PopupOverlayColor}">
+        <Frame Style="{StaticResource PopupStyle}"
+           VerticalOptions="CenterAndExpand"
+           HorizontalOptions="Center">
+            <StackLayout>
+                <Label Margin="0,20,0,0" Text="{Binding Source={x:Static resx:AppLanguage.ProfileUpdated}}" Style="{StaticResource RegularLabelStyle}" FontSize="20" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                <Button x:Name="Login" Text="{Binding Source={x:Static resx:AppLanguage.ReturnHome}}" Style="{StaticResource PrimaryRegularButtonStyle}" Clicked="UpdateButtonClicked" FontSize="16" HorizontalOptions="Center"/>
+            </StackLayout>
+
+        </Frame>
+    </StackLayout>
+</pages:PopupPage>

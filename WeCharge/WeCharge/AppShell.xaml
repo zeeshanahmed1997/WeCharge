@@ -1,0 +1,49 @@
+﻿<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:bottomtab="clr-namespace:WeCharge.Views.BottomTab"
+        xmlns:makeBooking="clr-namespace:WeCharge.Views.MakeBooking"
+       xmlns:login="clr-namespace:WeCharge.Views.Accounts"
+       xmlns:booking="clr-namespace:WeCharge.Views.Booking"
+       xmlns:signup="clr-namespace:WeCharge.Views.Accounts"
+       xmlns:theme="clr-namespace:WeCharge.Theme"
+       xmlns:controls="clr-namespace:WeCharge.Controls"
+       x:Class="WeCharge.AppShell"
+       BackgroundColor="#f0f1f3"
+       Shell.TabBarBackgroundColor="Black">
+
+    <Shell.FlyoutHeader>
+        <controls:FlyoutHeader/>
+    </Shell.FlyoutHeader>
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <StackLayout></StackLayout>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+    <MenuItem
+        Command="{Binding UpcomingBookingCommand}"
+        Text="Upcoming Bookings" >
+    </MenuItem>
+    <MenuItem
+        Command="{Binding MakeBookingCommand}"
+        Text="Make a Booking" >
+    </MenuItem>
+    <MenuItem
+        Command="{Binding PreviousChargesCommand}"
+        Text="Previous Charges" >
+
+    </MenuItem>
+
+    <MenuItem
+        Command="{Binding LogoutCommand}"
+        Text="Log out" >
+    </MenuItem>
+
+    <FlyoutItem x:Name="MainFlyout">
+        <ShellContent x:Name="HomeShell" Route="Home" Title="Home" Icon="home_filled.png" ContentTemplate="{DataTemplate bottomtab:HomePage}" Style="{StaticResource FlyoutStyle}" />
+        <ShellContent x:Name="MakeBookingShell" Route="MakeBooking" Title="Make Booking" Icon="flash_on.png" ContentTemplate="{DataTemplate makeBooking:MakeBookingPage}" Style="{StaticResource FlyoutStyle}"  />
+        <ShellContent Title="Booking" Icon="list_alt.png" Route="Booking" ContentTemplate="{DataTemplate booking:BookingsPage}" Style="{StaticResource FlyoutStyle}" />
+    </FlyoutItem>
+    <Shell.FlyoutFooter>
+        <controls:FlyoutFooter/>
+    </Shell.FlyoutFooter>
+</Shell>

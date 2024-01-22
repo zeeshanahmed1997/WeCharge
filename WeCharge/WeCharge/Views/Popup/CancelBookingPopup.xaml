@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                  x:Class="WeCharge.Views.Popup.CancelBookingPopup"
+                     xmlns:resx="clr-namespace:WeCharge.Resources"
+                  xmlns:theme="clr-namespace:WeCharge.Theme"
+                 xmlns:local="clr-namespace:WeCharge.CustomControls"
+                  BackgroundColor="Transparent">
+    <StackLayout Padding="20,0" BackgroundColor="{StaticResource PopupOverlayColor}">
+        <Frame Style="{StaticResource PopupStyle}"
+           VerticalOptions="CenterAndExpand"
+           HorizontalOptions="Center">
+            <StackLayout>
+                <Label Margin="0,20,0,0" Text="{Binding Source={x:Static resx:AppLanguage.CancelError}}" Style="{StaticResource HeadingText}" FontSize="16" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                <Label Margin="0,0,0,0" FontSize="14" Style="{StaticResource PopupLabelStyle}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Text="{Binding Source={x:Static resx:AppLanguage.CancelPopupError}}"/>
+                <Grid HorizontalOptions="FillAndExpand" Margin="0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" x:Name="KeepBooking" Text="{Binding Source={x:Static resx:AppLanguage.KeepBooking}}" Style="{StaticResource PrimaryRegularButtonStyle}"  FontSize="16" HorizontalOptions="FillAndExpand" Clicked="KeepBookingClick"/>
+                    <Button Grid.Column="1" x:Name="CancelBooking" Text="{Binding Source={x:Static resx:AppLanguage.CancelBooking}}" Style="{StaticResource ErrorButtonStyle}" Background="White"  FontSize="16"  HorizontalOptions="FillAndExpand" Clicked="CancelButtonClicked"/>
+                </Grid>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</pages:PopupPage>

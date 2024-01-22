@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+		<integer>2</integer>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>MinimumOSVersion</key>
+	<string>8.0</string>
+	<key>CFBundleDisplayName</key>
+	<string>WeCharge</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.lotusai.WeCharge</string>
+	<key>CFBundleVersion</key>
+	<string>1.923</string>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>CFBundleName</key>
+	<string>WeCharge</string>
+	<key>XSAppIconAssets</key>
+	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FontAwesomeBrands.otf</string>
+		<string>FontAwesomeRegular.otf</string>
+		<string>FontAwesomeSolid.otf</string>
+		<string>FontAwesomeLight.otf</string>
+		<string>Poppins-Regular.ttf</string>
+	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We use your location to automatically check you in and out of jobs when you arrive at or leave the address.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We use your location to automatically check you in and out of jobs when you arrive at or leave the address.</string>
+	<key>XSAppIconAssetsXSAppIconAssets</key>
+	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We use your location to automatically check you in and out of jobs when you arrive at or leave the address.</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>wecharge needs to use calendar for adding booking events</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>We need access to make phone calls </string>
+</dict>
+</plist>

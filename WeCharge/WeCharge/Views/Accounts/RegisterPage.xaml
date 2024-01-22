@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:customcontrols="clr-namespace:WeCharge.CustomControls"
+    xmlns:theme="clr-namespace:WeCharge.Theme"
+    xmlns:resx="clr-namespace:WeCharge.Resources" xmlns:customcontrols1="clr-namespace:WeCharge"
+    x:Class="WeCharge.Views.Accounts.RegisterPage"
+    Title="Register"
+    BackgroundColor="{StaticResource BackgroundColor}">
+    <ContentPage.Content>
+        <ScrollView Padding="0,0,0,20">
+            <StackLayout Margin="10">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                    <Frame WidthRequest="60" HeightRequest="60" CornerRadius="60" HasShadow="False" BackgroundColor="White" HorizontalOptions="Start" VerticalOptions="Center">
+                        <Image Source="sample.avif" HeightRequest="60" WidthRequest="60" Aspect="AspectFill" />
+                    </Frame>
+                    <Label Text="{Binding Source={x:Static resx:AppLanguage.WeCharge}}" Style="{StaticResource EntryLabelStyle}" Margin="10,0,0,0" HorizontalOptions="Start" VerticalOptions="Center" />
+                </StackLayout>
+                <!--#region Personal Information-->
+                <Label Text="{Binding Source={x:Static resx:AppLanguage.PersonalInformation}}" Style="{StaticResource HeadingText}"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                        <Label Text="{Binding Source={x:Static resx:AppLanguage.FirstName}}" Style="{StaticResource EntryLabelStyle}" HorizontalOptions="StartAndExpand" />
+                        <customcontrols:CustomEntry x:Name="FirstName" BorderColor="{Binding FirstNameBorderColor}" Text="{Binding FirstName}"    
+                                                    PlaceholderColor="{StaticResource EntryPlaceholderColor}" HeightRequest="50"   
+                                                    Keyboard="Email"  
+                                                    TextColor="{StaticResource EntryTextColor }" 
+                                                    BackgroundColor="{StaticResource EntryPlaceholderColor}"/>
+                    </StackLayout>
+                    <StackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                        <Label Text="{Binding Source={x:Static resx:AppLanguage.LastName}}" Style="{StaticResource EntryLabelStyle}" HorizontalOptions="StartAndExpand" />
+                        <customcontrols:CustomEntry x:Name="LastName" BorderColor="{Binding LastNameBorderColor}" Text="{Binding LastName}"    
+                                                PlaceholderColor="{StaticResource EntryPlaceholderColor}" HeightRequest="50"   
+                                                Keyboard="Email"  
+                                                TextColor="{StaticResource EntryTextColor }" 
+                                                BackgroundColor="{StaticResource EntryPlaceholderColor}"/>
+                    </StackLayout>
+                    <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                        <Label Text="{Binding Source={x:Static resx:AppLanguage.Email}}" Grid.Row="1" Style="{StaticResource EntryLabelStyle}" HorizontalOptions="StartAndExpand" />
+                        <customcontrols:CustomEntry Grid.Row="1"  BorderColor="{Binding EmailBorderColor}" x:Name="Email" Text="{Binding Email}"    
+                                                    PlaceholderColor="{StaticResource EntryPlaceholderColor}" HeightRequest="50"   
+                                                    Keyboard="Email"  
+                                                    TextColor="{StaticResource EntryTextColor }" 
+                                                    BackgroundColor="{StaticResource EntryPlaceholderColor}"
+                                                    HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                        <Label Text="{Binding Source={x:Static resx:AppLanguage.Password}}" Style="{StaticResource EntryLabelStyle}" HorizontalOptions="StartAndExpand" />
+                        <customcontrols:CustomEntry x:Name="Password" BorderColor="{Binding PasswordBorderColor}" Text="{Binding Password}"    
+                                                PlaceholderColor="{StaticResource EntryPlaceholderColor}" HeightRequest="50"   
+                                                IsPassword="True"  
+                                                TextColor="{StaticResource EntryTextColor }"
+                                                BackgroundColor="{StaticResource EntryPlaceholderColor}" />
+                    </StackLayout>
+                    <StackLayout Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                        <Label Text="ConfirmPassword" Style="{StaticResource EntryLabelStyle}" HorizontalOptions="StartAndExpand" />
+                        <customcontrols:CustomEntry x:Name="ConfirmPassword" BorderColor="{Binding ConfirmPasswordBorderColor}" Text="{Binding ConfirmPassword}"    
+                                            PlaceholderColor="{StaticResource EntryPlaceholderColor}" HeightRequest="50"   
+                                            IsPassword="True"  
+                                            TextColor="{StaticResource EntryTextColor }"
+                                            BackgroundColor="{StaticResource EntryPlaceholderColor}" />
+                    </StackLayout>
+                </Grid>
+                <!--#region-->
+                <ActivityIndicator x:Name="ActivityIndicator" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" Color="{StaticResource ProgressBarColor}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+
+                <!--#region Vehical Information-->
+                <Label Text="{Binding Source={x:Static resx:AppLanguage.VehicalInformation}}" Margin="0,15" Style="{StaticResource HeadingText}" />
+                <StackLayout Padding="0" HorizontalOptions="FillAndExpand">
+                    <Grid HorizontalOptions="FillAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                            <Label Text="{Binding Source={x:Static resx:AppLanguage.Brand}}" Style="{StaticResource EntryLabelStyle}" HorizontalOptions="StartAndExpand" />
+                            <Grid ColumnDefinitions="Auto,*,*">
+                                <customcontrols1:CustomPicker
+                                    x:Name="BrandPicker"
+                                    SelectedIndex="{Binding BrandSelectedIndex}"
+                                    BorderColor="{Binding BrandColor}"
+                                    ItemsSource="{Binding VehicleBrandSource}"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="3"
+                            HorizontalOptions="FillAndExpand"
+                                                TextColor="{StaticResource RegularLabelColor }"
+                                                BackgroundColor="{StaticResource BackgroundColor}"
+                                                HeightRequest="50"/>
+                                <Label Grid.Column="3" Margin="0,15,10,0" HorizontalOptions="EndAndExpand"  Text="{Binding Source={x:Static theme:FontIcons.AngleDown}}" Style="{StaticResource IconLabelLight}"/>
+                            </Grid>
+                        </StackLayout>
+                        <StackLayout  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                            <Label Text="{Binding Source={x:Static resx:AppLanguage.Model}}" Style="{StaticResource EntryLabelStyle}" HorizontalOptions="StartAndExpand" />
+                            <Grid ColumnDefinitions="Auto,*,*">
+                                <customcontrols1:CustomPicker
+                            SelectedIndex="{Binding ModelSelectedIndex}"
+                            ItemsSource="{Binding VehicleModelSource}"
+                            BorderColor="{Binding ModelColor}"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="3"
+                            HorizontalOptions="FillAndExpand"
+                            x:Name="ModelPicker"
+                                                TextColor="{StaticResource RegularLabelColor }"
+                                                BackgroundColor="{StaticResource BackgroundColor}"
+                                                HeightRequest="50"/>
+                                <Label Grid.Column="3" Margin="0,15,10,0" HorizontalOptions="EndAndExpand"  Text="{Binding Source={x:Static theme:FontIcons.AngleDown}}" Style="{StaticResource IconLabelLight}"/>
+                            </Grid>
+
+                        </StackLayout>
+                        <StackLayout Grid.Row="2" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                            <Label Text="{Binding Source={x:Static resx:AppLanguage.LicensePlate}}"  Style="{StaticResource EntryLabelStyle}" HorizontalOptions="StartAndExpand" />
+                            <Grid ColumnDefinitions="Auto,*,*">
+                                <customcontrols1:CustomPicker
+                            Grid.Column="1"
+                            Grid.ColumnSpan="3"
+                            HorizontalOptions="FillAndExpand"
+                            SelectedIndex="{Binding LicensePlateSelectedIndex}"
+                            BorderColor="{Binding LicensePlateColor}"
+                            
+                            x:Name="LicensePlatePicker"
+                                                TextColor="{StaticResource RegularLabelColor }"
+                                                BackgroundColor="{StaticResource BackgroundColor}"
+                                                HeightRequest="50"/>
+                                <Label Grid.Column="3" Margin="0,15,10,0" HorizontalOptions="EndAndExpand"  Text="{Binding Source={x:Static theme:FontIcons.AngleDown}}" Style="{StaticResource IconLabelLight}"/>
+                            </Grid>
+
+                        </StackLayout>
+                        <StackLayout  Grid.Row="2" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                            <Label Text="{Binding Source={x:Static resx:AppLanguage.ChargerType}}" Style="{StaticResource EntryLabelStyle}" HorizontalOptions="StartAndExpand" />
+
+                            <Grid ColumnDefinitions="Auto,*,*">
+                                <customcontrols1:CustomPicker
+                            Grid.Column="1"
+                            Grid.ColumnSpan="3"
+                            HorizontalOptions="FillAndExpand"
+                            BorderColor="{Binding ChargerTypeColor}"
+                            SelectedIndex="{Binding ChargerTypeSelectedIndex}"
+                            ItemsSource="{Binding ChargerTypeSource}"
+                            x:Name="ChargerTypePicker"
+                                                TextColor="{StaticResource RegularLabelColor }"
+                                                BackgroundColor="{StaticResource BackgroundColor}"
+                                                HeightRequest="50"/>
+                                <Label Grid.Column="3" Margin="0,15,10,0" HorizontalOptions="EndAndExpand"  Text="{Binding Source={x:Static theme:FontIcons.AngleDown}}" Style="{StaticResource IconLabelLight}"/>
+                            </Grid>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+                <!--#endregion-->
+                <Button x:Name="RegisterButton" Style="{StaticResource ButtonPrimary}" CornerRadius="10" Text="Register" Command="{Binding SubmitRegisterCommand}"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

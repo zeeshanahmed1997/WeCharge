@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+          xmlns:theme="clr-namespace:WeCharge.Theme"
+       xmlns:resx="clr-namespace:WeCharge.Resources"
+    Title="Confirm Booking"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:WeCharge.CustomControls"
+    x:Class="WeCharge.Views.MakeBooking.ConfirmBookingPage"
+     BackgroundColor="{StaticResource BackgroundColor}">
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior Command="{Binding ShellBackButtonCommand}" />
+    </Shell.BackButtonBehavior>
+    <ContentPage.Content>
+        <ScrollView Padding="0,10">
+            <Grid>
+                <StackLayout VerticalOptions="FillAndExpand" Padding="0,20">
+                    <Frame Style="{StaticResource ValuesFrameStyle}" Margin="20,10">
+                        <Grid ColumnDefinitions="*,auto">
+                            <StackLayout Grid.Column="0" >
+                                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"  Text="{Binding LocationName}" Style="{StaticResource RegularLabelStyle}" FontSize="14"/>
+                                <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"  Text="{Binding LocationAddress}" HorizontalOptions="StartAndExpand" Style="{StaticResource RegularLabelLightStyle}" />
+                                <!--<Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LocationCity}" Style="{StaticResource RegularLabelLightStyle}" />-->
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
+                    <Frame Style="{StaticResource ValuesFrameStyle}" Margin="20,5">
+                        <Grid Grid.Row="0" Grid.Column="0" VerticalOptions="Center" RowDefinitions="auto,auto,auto" ColumnDefinitions="auto,*">
+                            <Label Grid.Row="0" Grid.Column="1"  Text="{Binding DateText}" Style="{StaticResource RegularLabelStyle}"/>
+                            <Label Grid.Row="0" Grid.Column="0"  Text="{Binding Source={x:Static theme:FontIcons.Calendar}}" Style="{StaticResource IconLabelLight}"/>
+                            <Label Grid.Row="1" Grid.Column="1"   Text="{Binding LocationInfo}" Style="{StaticResource RegularLabelStyle}"/>
+                            <Label Grid.Row="1" Grid.Column="0"  Text="{Binding Source={x:Static theme:FontIcons.Location}}" Style="{StaticResource IconLabelLight}"/>
+                            <Label Grid.Row="2" Grid.Column="1"  Text="{Binding Time}" Style="{StaticResource RegularLabelStyle}"/>
+                            <Label Grid.Row="2" Grid.Column="0"  Text="{Binding Source={x:Static theme:FontIcons.Time}}" Style="{StaticResource IconLabelLight}"/>
+                        </Grid>
+                    </Frame>
+                    <Grid HorizontalOptions="FillAndExpand" Padding="20,0" VerticalOptions="EndAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <local:IconButton Grid.Row="0" Margin="0,0,0,20" Padding="0,0" HorizontalOptions="FillAndExpand" FontSize="11" Style="{StaticResource SecondaryIconButtonStyle}" FrameHeight="15" TitleText="{Binding RemainingTime, StringFormat='To complete booking we’ve blocked your slot for {0:mm\\:ss}s'}" LabelIconStyle="{StaticResource IconLabelLight}" IconText="{Binding Source={x:Static theme:FontIcons.Clock}}"  Command="{Binding GetDirectionsCommand}" />
+                        <Button Grid.Row="1" x:Name="Confirm" Command="{Binding ConfirmButtonClicked}" Text="{Binding Source={x:Static resx:AppLanguage.Confirm}}" FontSize="16" Style="{StaticResource RegularButtonStyle}" BackgroundColor="Black" TextColor="White" HorizontalOptions="FillAndExpand"/>
+                        <Button Grid.Row="2" x:Name="Back" Command="{Binding BackButtonClicked}" Text="{Binding Source={x:Static resx:AppLanguage.Back}}" FontSize="16" Style="{StaticResource ButtonSecondary}" HorizontalOptions="FillAndExpand"/>
+                    </Grid>
+                </StackLayout>
+                <ActivityIndicator x:Name="ActivityIndicator" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" Color="{StaticResource ProgressBarColor}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+

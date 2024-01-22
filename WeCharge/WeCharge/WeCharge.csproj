@@ -1,0 +1,208 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <ProduceReferenceAssemblyInOutDir>true</ProduceReferenceAssemblyInOutDir>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="2.1.0" />
+    <PackageReference Include="Microcharts" Version="0.9.5.9" />
+    <PackageReference Include="Microcharts.Forms" Version="0.9.5.9" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="5.0.0.2196" />
+    <PackageReference Include="Xam.Plugin.Geolocator" Version="4.5.0.6" />
+    <PackageReference Include="Plugin.Geofence" Version="1.8.11" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="1.2.0" />
+    <PackageReference Include="Xamarin.Forms.Skeleton" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Themes\" />
+    <None Remove="Views\" />
+    <None Remove="Views\BottomTab\" />
+    <None Remove="Controls\" />
+    <None Remove="CustomControls\" />
+    <None Remove="ViewModels\" />
+    <None Remove="Assets\" />
+    <None Remove="Assets\Fonts\" />
+    <None Remove="Assets\Fonts\Poppins-Black.ttf" />
+    <None Remove="Assets\Fonts\Poppins-BlackItalic.ttf" />
+    <None Remove="Assets\Fonts\Poppins-Bold.ttf" />
+    <None Remove="Assets\Fonts\Poppins-BoldItalic.ttf" />
+    <None Remove="Assets\Fonts\Poppins-ExtraBold.ttf" />
+    <None Remove="Assets\Fonts\Poppins-ExtraBoldItalic.ttf" />
+    <None Remove="Assets\Fonts\Poppins-ExtraLight.ttf" />
+    <None Remove="Assets\Fonts\Poppins-ExtraLightItalic.ttf" />
+    <None Remove="Assets\Fonts\Poppins-Italic.ttf" />
+    <None Remove="Assets\Fonts\Poppins-Light.ttf" />
+    <None Remove="Assets\Fonts\Poppins-LightItalic.ttf" />
+    <None Remove="Assets\Fonts\Poppins-Medium.ttf" />
+    <None Remove="Assets\Fonts\Poppins-MediumItalic.ttf" />
+    <None Remove="Assets\Fonts\Poppins-Regular.ttf" />
+    <None Remove="Assets\Fonts\Poppins-SemiBold.ttf" />
+    <None Remove="Assets\Fonts\Poppins-SemiBoldItalic.ttf" />
+    <None Remove="Assets\Fonts\Poppins-Thin.ttf" />
+    <None Remove="Assets\Fonts\Poppins-ThinItalic.ttf" />
+    <None Remove="Views\Signup\" />
+    <None Remove="Mono.Android" />
+    <None Remove="Resources\" />
+    <None Remove="Views\Accounts\" />
+    <None Remove="ViewModels\Accounts\" />
+    <None Remove="Assets\Images\home.png" />
+    <None Remove="Assets\Images\logo.png" />
+    <None Remove="Assets\Images\mkbooking.jpeg" />
+    <None Remove="Assets\Images\sample.avif" />
+    <None Remove="Assets\Images\" />
+    <None Remove="Views\Popup\" />
+    <None Remove="Views\MakeBooking\" />
+    <None Remove="Views\Connect\" />
+    <None Remove="Views\Charge\" />
+    <None Remove="Views\Booking\" />
+    <None Remove="ViewModels\Booking\" />
+    <None Remove="ViewModels\Charge\" />
+    <None Remove="ViewModels\Connect\" />
+    <None Remove="ViewModels\MakeBooking\" />
+    <None Remove="APIServices\" />
+    <None Remove="APIServices\WebServices\" />
+    <None Remove="Models\" />
+    <None Remove="Models\Authentication\" />
+    <None Remove="APIServices\Authentication\" />
+    <None Remove="Services\" />
+    <None Remove="Helpers\" />
+    <None Remove="Models\General\" />
+    <None Remove="Models\VehicleDetails\" />
+    <None Remove="Models\Charge\" />
+    <None Remove="Models\APIResponse\" />
+    <None Remove="APIServices\EndPoints\" />
+    <None Remove="APIServices\Bookings\" />
+    <None Remove="Models\RequestModels\" />
+    <None Remove="APIServices\Charge\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Themes\" />
+    <Folder Include="Views\" />
+    <Folder Include="Views\BottomTab\" />
+    <Folder Include="Controls\" />
+    <Folder Include="CustomControls\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Assets\" />
+    <Folder Include="Assets\Fonts\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Views\Accounts\" />
+    <Folder Include="ViewModels\Accounts\" />
+    <Folder Include="Assets\Images\" />
+    <Folder Include="Views\Popup\" />
+    <Folder Include="Views\MakeBooking\" />
+    <Folder Include="Views\Connect\" />
+    <Folder Include="Views\Charge\" />
+    <Folder Include="Views\Booking\" />
+    <Folder Include="ViewModels\Booking\" />
+    <Folder Include="Views\Charge\" />
+    <Folder Include="ViewModels\Charge\" />
+    <Folder Include="ViewModels\Connect\" />
+    <Folder Include="ViewModels\MakeBooking\" />
+    <Folder Include="Models\MakeBooking\" />
+    <Folder Include="APIServices\" />
+    <Folder Include="APIServices\WebServices\" />
+    <Folder Include="Models\" />
+    <Folder Include="Models\Authentication\" />
+    <Folder Include="APIServices\Authentication\" />
+    <Folder Include="Services\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Models\General\" />
+    <Folder Include="Models\VehicleDetails\" />
+    <Folder Include="Models\Charge\" />
+    <Folder Include="Models\APIResponse\" />
+    <Folder Include="APIServices\EndPoints\" />
+    <Folder Include="APIServices\Bookings\" />
+    <Folder Include="Models\RequestModels\" />
+    <Folder Include="APIServices\Charge\" />
+    <Folder Include="Models\General\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\BottomTab\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\BottomTab\MakeBookings.xaml.cs">
+      <DependentUpon>MakeBookings.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\BottomTab\Bookings.xaml.cs">
+      <DependentUpon>Bookings.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Controls\FlyoutHeader.xaml.cs">
+      <DependentUpon>FlyoutHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Resources.Designer.cs">
+      <DependentUpon>AppLanguage.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\AppLanguage.Designer.cs">
+      <DependentUpon>AppLanguage.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Fonts\Poppins-Black.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Poppins-BlackItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Poppins-Bold.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Poppins-BoldItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Poppins-ExtraBold.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Poppins-ExtraBoldItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Poppins-ExtraLight.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Poppins-ExtraLightItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Poppins-Italic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Poppins-Light.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Poppins-LightItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Poppins-Medium.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Poppins-MediumItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Poppins-Regular.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Poppins-SemiBold.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Poppins-SemiBoldItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Poppins-Thin.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Poppins-ThinItalic.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppLanguage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\AppLanguage.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppLanguage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
+    <Reference Include="Xamarin.iOS">
+      <HintPath>..\..\..\..\..\..\..\Library\Frameworks\Xamarin.iOS.framework\Versions\16.4.0.6\lib\mono\Xamarin.iOS\Xamarin.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.iOS">
+      <HintPath>..\..\..\..\..\..\Library\Frameworks\Xamarin.iOS.framework\Versions\16.4.0.18\lib\mono\Xamarin.iOS\Xamarin.iOS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Assets\Images\home.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Assets\Images\logo.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Assets\Images\mkbooking.jpeg">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Assets\Images\sample.avif">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+  </ItemGroup>
+</Project>

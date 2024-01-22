@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:customcontrols="clr-namespace:WeCharge.CustomControls"
+    xmlns:theme="clr-namespace:WeCharge.Theme"
+    xmlns:resx="clr-namespace:WeCharge.Resources"
+    x:Class="WeCharge.Views.Accounts.LoginPage"
+    xmlns:local="clr-namespace:WeCharge.CustomControls"
+    BackgroundColor="{StaticResource BackgroundColor}">
+    <ContentPage.Resources>
+
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Padding="30" Margin="0,30,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Frame Grid.Row="0" WidthRequest="80" HeightRequest="80" CornerRadius="60" HasShadow="False" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,-10">
+                    <Image Source="sample.avif" HeightRequest="80" WidthRequest="80" Aspect="AspectFill" />
+                </Frame>
+                <Label Grid.Row="1" Text="{Binding Source={x:Static resx:AppLanguage.WeCharge}}" TextColor="{StaticResource RegularLabelColor}" FontFamily="PoppinsBold" FontSize="Large" FontAttributes="Bold" Margin="0,10,0,0" HorizontalOptions="Center" VerticalOptions="End" />
+                <Label Grid.Row="2" Text="{Binding Source={x:Static resx:AppLanguage.WeChargeDescription}}" TextColor="{StaticResource RegularLabelColor}" FontFamily="PoppinsRegular" FontSize="12"  Margin="0,15,0,0" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" />
+                <!--#region LoginEntry-->
+                <StackLayout Grid.Row="3" Margin="0,60,0,0"   Orientation="Vertical" Spacing="10" VerticalOptions="FillAndExpand">
+                    <Grid RowDefinitions="auto,auto,auto,auto,auto" ColumnDefinitions="*,auto,auto">
+                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding Source={x:Static resx:AppLanguage.Email}}"  Style="{StaticResource EntryLabelStyle}" HorizontalOptions="StartAndExpand" />
+                        <customcontrols:CustomEntry Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" x:Name="Email" Text="{Binding Email}"
+                                            BorderColor="{Binding EmailBorderColor}"
+                                            PlaceholderColor="{StaticResource EntryPlaceholderColor}" HeightRequest="50"   
+                                            Keyboard="Email"
+                                            TextColor="{StaticResource EntryTextColor}" 
+                                            BackgroundColor="{StaticResource EntryPlaceholderColor}"
+                                            HorizontalOptions="FillAndExpand"/>
+                        <Label Grid.Row="2" Text="{Binding Source={x:Static resx:AppLanguage.Password}}" Style="{StaticResource EntryLabelStyle}" HorizontalOptions="StartAndExpand" />
+                        <customcontrols:CustomEntry Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" x:Name="Password" Text="{Binding Password}"
+                            IsPassword="{Binding IsPasswordHidden}" 
+                            BorderColor="{Binding PasswordBorderColor}"
+                            PlaceholderColor="{StaticResource EntryPlaceholderColor}" HeightRequest="50"   
+                            TextColor="{StaticResource EntryTextColor}"
+                            BackgroundColor="{StaticResource EntryPlaceholderColor}"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Start"/>
+                        <Label Grid.Column="1" Grid.Row="3" VerticalOptions="Center" Text="{Binding PasswordIcon}" TextColor="Black"  FontFamily="{StaticResource FontAwesomeSolid}" FontSize="20" HorizontalOptions="End">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding TogglePasswordVisibilityCommand}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                        <Label Grid.Row="5" Grid.Column="0" x:Name="ErrorMessage" IsVisible="{Binding ErrorMessage}" TextColor="Red" HorizontalOptions="StartAndExpand" Text="{Binding ErrorMessage}"/>
+
+                        <Label Grid.Row="4" Grid.Column="1" x:Name="ForgetPassword" IsEnabled="{Binding IsForgetPasswordEnabled}" TextDecorations="Underline" Text="{Binding Source={x:Static resx:AppLanguage.ForgetPassword}}" Style="{StaticResource EntryLabelStyle}" HorizontalOptions="End">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ForgetPasswordCommand}"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </Grid>
+                    <Button x:Name="LoginButton" Style="{StaticResource ButtonPrimary}" Text="{Binding Source={x:Static resx:AppLanguage.Login}}" Command="{Binding SubmitLoginCommand}" IsEnabled="{Binding IsButtonEnable}"/>
+                    <!--regisetr user button commented-->
+                    <!--<Button Style="{StaticResource ButtonSecondary}" Margin="0,10,0,0" Text="{Binding Source={x:Static resx:AppLanguage.Register}}" Command="{Binding SubmitSignupCommand}"/>-->
+                </StackLayout>
+                <!--#endregion-->
+                <ActivityIndicator x:Name="ActivityIndicator" Grid.Row="0" Grid.RowSpan="6" IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" Color="{StaticResource ProgressBarColor}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            </Grid>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

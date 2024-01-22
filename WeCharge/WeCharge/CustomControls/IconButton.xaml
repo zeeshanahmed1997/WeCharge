@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:theme="clr-namespace:WeCharge.Theme"
+    x:Class="WeCharge.CustomControls.IconButton">
+    <ContentView.Content>
+
+        <Frame x:Name="frame" HasShadow="False" HeightRequest="40" CornerRadius="5" Padding="10" VerticalOptions="Start" HorizontalOptions="FillAndExpand" >
+        <StackLayout Padding="0" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+                <Label  x:Name="IconLabel" Style="{StaticResource IconLabelLight}" FontSize="12" VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Label  x:Name="TextLabel" FontSize="12" VerticalOptions="Center" HorizontalOptions="Center"/>
+        </StackLayout>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+            </Frame.GestureRecognizers>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

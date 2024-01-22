@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="Login" xml:space="preserve">
+		<value>Login</value>
+	</data>
+	<data name="WeChargeDescription" xml:space="preserve">
+		<value>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</value>
+    </data>
+	<data name="ResetPassword" xml:space="preserve">
+		<value>Reset Password</value>
+	</data>
+	<data name="no_internet_alert" xml:space="preserve">
+    <value>No Internet Connection!</value>
+  </data>
+	<data name="Register" xml:space="preserve">
+	  <value>New Member? Register</value>
+  </data>
+	<data name="okay" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+	<data name="Email" xml:space="preserve">
+		<value>Email</value>
+	</data>
+	<data name="ReviewBooking" xml:space="preserve">
+		<value>Review Booking</value>
+	</data>
+	<data name="PendingBooking" xml:space="preserve">
+		<value>Pending Booking</value>
+	</data>
+		<data name="Charging" xml:space="preserve">
+		<value>Return to charge</value>
+	</data>
+			<data name="ChargeInProgress" xml:space="preserve">
+		<value>Charge is progress</value>
+	</data>
+	<data name="Password" xml:space="preserve">
+		<value>Password</value>
+	</data>
+	<data name="ForgetPassword" xml:space="preserve">
+		<value>Forgot Password?</value>
+	</data>
+	<data name="PersonalInformation" xml:space="preserve">
+		<value>Personal Information</value>
+	</data>
+	<data name="FirstName" xml:space="preserve">
+		<value>First Name</value>
+	</data>
+	<data name="LastName" xml:space="preserve">
+		<value>Last Name</value>
+	</data>
+	<data name="VehicalInformation" xml:space="preserve">
+		<value>Vehical Information</value>
+	</data>
+	<data name="Brand" xml:space="preserve">
+		<value>Brand</value>
+	</data>
+	<data name="WeCharge" xml:space="preserve">
+		<value>WeCharge</value>
+	</data>
+	<data name="Model" xml:space="preserve">
+		<value>Model</value>
+	</data>
+	<data name="LicensePlate" xml:space="preserve">
+		<value>Licence Plate</value>
+	</data>
+	<data name="ChargerType" xml:space="preserve">
+		<value>Charger Type</value>
+	</data>
+	<data name="Date" xml:space="preserve">
+		<value>Date</value>
+	</data>
+	<data name="Duration" xml:space="preserve">
+		<value>Duration</value>
+	</data>
+	<data name="AvailableSlot" xml:space="preserve">
+		<value>Available Slot</value>
+	</data>
+	<data name="Apply" xml:space="preserve">
+		<value>Apply</value>
+	</data>
+	<data name="Cancel" xml:space="preserve">
+		<value>Cancel</value>
+	</data>
+	<data name="GetDirections" xml:space="preserve">
+		<value>Get Directions</value>
+	</data>
+	<data name="AddToCalendar" xml:space="preserve">
+		<value>Add to calendar</value>
+	</data>
+	<data name="StartCharging" xml:space="preserve">
+		<value>Start Charging</value>
+	</data>
+	<data name="StartCharge" xml:space="preserve">
+		<value>Start Charge</value>
+	</data>
+	<data name="GoToHome" xml:space="preserve">
+		<value>Go to Home</value>
+	</data>
+	<data name="CheckAvailability" xml:space="preserve">
+		<value>Check Availability</value>
+	</data>
+	<data name="MakeNewBooking" xml:space="preserve">
+		<value>Make New Booking</value>
+	</data>
+	<data name="Confirm" xml:space="preserve">
+		<value>Confirm</value>
+	</data>
+	<data name="Back" xml:space="preserve">
+		<value>Back</value>
+	</data>
+	<data name="BookSpace" xml:space="preserve">
+		<value>Book Space</value>
+	</data>
+	<data name="Reset" xml:space="preserve">
+		<value>Reset</value>
+	</data>
+	<data name="UpComingCharge" xml:space="preserve">
+		<value>Upcoming Charge</value>
+	</data>
+	<data name="FindaChargingLocation" xml:space="preserve">
+		<value>Find a Charging Location</value>
+	</data>
+	<data name="LastCharge" xml:space="preserve">
+		<value>Last Charge</value>
+	</data>
+	<data name="Connect" xml:space="preserve">
+		<value>Connect</value>
+	</data>
+	<data name="NeedHelp" xml:space="preserve">
+		<value>Need Help? Call us Now</value>
+	</data>
+	<data name="ChargeEstimate" xml:space="preserve">
+		<value>Request charge estimate</value>
+	</data>
+	<data name="ChargeCost" xml:space="preserve">
+		<value>Pre-set maximum charge cost</value>
+	</data>
+	<data name="OtherAmount" xml:space="preserve">
+		<value>Other Amount</value>
+	</data>
+	<data name="Estimate" xml:space="preserve">
+		<value>Estimate</value>
+	</data>
+	<data name="PresetChargeCost" xml:space="preserve">
+		<value>Pre-set maximum charge cost</value>
+	</data>
+	<data name="VehicleCostNote" xml:space="preserve">
+		<value>Note these are all estimates and can vary from vehicle to vehicle</value>
+	</data>
+	<data name="StopCharging" xml:space="preserve">
+		<value>Stop Charging</value>
+	</data>
+	<data name="ChargedSoFar" xml:space="preserve">
+		<value>Charged so far</value>
+	</data>
+	<data name="RemainingToLimit" xml:space="preserve">
+		<value>Remaining to limit</value>
+	</data>
+	<data name="VehicleCharge" xml:space="preserve">
+		<value>Vehicle's charge</value>
+	</data>
+	<data name="ChargeSpeed" xml:space="preserve">
+		<value>Charge speed</value>
+	</data>
+	<data name="EnergyRequired" xml:space="preserve">
+		<value>Energy Required :</value>
+	</data>
+	<data name="TotalCost" xml:space="preserve">
+		<value>Total Cost            :</value>
+	</data>
+	<data name="Time" xml:space="preserve">
+		<value>Time                      :</value>
+	</data>
+	<data name="UpcomingBookings" xml:space="preserve">
+		<value>Upcoming Bookings</value>
+	</data>
+		<data name="BookingSummary" xml:space="preserve">
+		<value>Upcoming Bookings</value>
+	</data>
+	<data name="PreviousBookings" xml:space="preserve">
+		<value>Previous Bookings</value>
+	</data>
+	<data name="Date" xml:space="preserve">
+		<value>Date</value>
+	</data>
+	<data name="Station" xml:space="preserve">
+		<value>Station</value>
+	</data>
+	<data name="Energy" xml:space="preserve">
+		<value>Energy</value>
+	</data>
+	<data name="Cost" xml:space="preserve">
+		<value>Cost</value>
+	</data>
+	<data name="UnitsConsumed" xml:space="preserve">
+		<value>Units Consumed</value>
+	</data>
+	<data name="Duration" xml:space="preserve">
+		<value>Duration</value>
+	</data>
+	<data name="ChargingFee" xml:space="preserve">
+		<value>Charging Fee</value>
+	</data>
+	<data name="ServiceCharges" xml:space="preserve">
+		<value>Service Charges</value>
+	</data>
+	<data name="Subtotal" xml:space="preserve">
+		<value>Subtotal</value>
+	</data>
+	<data name="Tax" xml:space="preserve">
+		<value>Tax</value>
+	</data>
+	<data name="GrandTotal" xml:space="preserve">
+		<value>Grand Total</value>
+	</data>
+	<data name="GetDirections" xml:space="preserve">
+		<value>Get Directions</value>
+	</data>
+	<data name="BookAgain" xml:space="preserve">
+		<value>Book Again</value>
+	</data>
+	<data name="TryAgain" xml:space="preserve">
+		<value>Try Again</value>
+	</data>
+	<data name="ContactSupport" xml:space="preserve">
+		<value>Contact Support</value>
+	</data>
+	<data name="LocationErrorPopupText" xml:space="preserve">
+		<value>Oops! We need access to your location.
+To provide you with the best experience, our app requires access to your device's location.</value>
+	</data>
+	<data name="NetworkErrorPopupText" xml:space="preserve">
+		<value>We're sorry, but it appears that you are currently not connected to the internet. Please check your network connection and try again.</value>
+	</data>
+	<data name="UnknowErrorPopupText" xml:space="preserve">
+		<value> Please wait a moment and try again as it may be a temporary issue. If this message persists, please contact support</value>
+	</data>
+	<data name="UnknownError" xml:space="preserve">
+		<value>Something went wrong</value>
+	</data>
+	<data name="LocationError" xml:space="preserve">
+		<value>We can't find you</value>
+	</data>
+	<data name="NetworkError" xml:space="preserve">
+		<value>No internet connection</value>
+	</data>
+	<data name="Continue" xml:space="preserve">
+		<value>Continue</value>
+	</data>
+	<data name="KeepBooking" xml:space="preserve">
+		<value>Keep Booking</value>
+	</data>
+	<data name="CancelBooking" xml:space="preserve">
+		<value>Cancel Booking</value>
+	</data>
+	<data name="CancelError" xml:space="preserve">
+		<value>Are you sure you want to cancel?</value>
+	</data>
+	<data name="CancelPopupError" xml:space="preserve">
+		<value>Do you still want to cancel this booking? This can’t be undone.</value>
+	</data>
+	<data name="RegistrationSubmitted" xml:space="preserve">
+		<value>Registration submitted successfully</value>
+	</data>
+	<data name="RegistrationSubmittedText" xml:space="preserve">
+		<value>Registration submitted successfully. Please check your email for instructions on what to do next.</value>
+	</data>
+	<data name="ReturnHome" xml:space="preserve">
+		<value>Return to home</value>
+	</data>
+	<data name="ProfileUpdated" xml:space="preserve">
+		<value>Your Personal details and Vehicle Information have been updated</value>
+	</data>
+	<data name="ForgotPassword" xml:space="preserve">
+		<value>Forgot Password</value>
+	</data>
+	<data name="ForgotPasswordMessage" xml:space="preserve">
+		<value>No worries, we'll send you a mail regarding resetting the password</value>
+	</data>
+	<data name="MailSent" xml:space="preserve">
+		<value>Mail Sent Successfully!</value>
+	</data>
+	<data name="MailSentMessage" xml:space="preserve">
+		<value>We have sent you a mail regarding resetting your password. Please reset the password and login again</value>
+    </data>
+
+	<data name="ConfirmPassword" xml:space="preserve">
+		<value>ConfirmPassword</value>
+	</data>
+
+	<data name="UpdateProfile" xml:space="preserve">
+		<value>Update Profile</value>
+	</data>
+
+	<data name="MonthlySummary" xml:space="preserve">
+		<value>Summary this month</value>
+	</data>
+	<data name="ChargingRate" xml:space="preserve">
+		<value>134.6 kW / $86.50</value>
+	</data>
+	<data name="ViewBooking" xml:space="preserve">
+		<value>View Booking</value>
+	</data>
+	<data name="CancelBooking" xml:space="preserve">
+		<value>Cancel Booking</value>
+	</data>
+	<data name="BookingId" xml:space="preserve">
+		<value>Booking ID: #0193741_NSW</value>
+	</data>
+	<data name="ChargingSummary" xml:space="preserve">
+		<value>Charging Summary</value>
+	</data>
+
+	<data name="PendingBookingMessage" xml:space="preserve">
+		<value>Your previous booking hasn't been confirmed yet. Kindly take a moment to finalize it.</value>
+	</data>
+	<data name="NoPendingBooking" xml:space="preserve">
+		<value>No pending booking</value>
+	</data>
+    <data name="NoUpcomingBooking" xml:space="preserve">
+		<value>No upcoming booking</value>
+	</data>
+
+	 <data name="JunctionArrivingMessage" xml:space="preserve">
+		<value>You’ve arrived at your 2 p.m slot charge at Westfield Bondi Junction</value>
+	</data>
+	 <data name="VehicleCurrentlyCharging" xml:space="preserve">
+		<value>Your Vehicle is currently charging</value>
+	</data>
+	<data name="ParkInBay" xml:space="preserve">
+		<value>Please park in Bay 3 to start charge</value>
+	</data>
+	<data name="MapView" xml:space="preserve">
+		<value>Map View</value>
+	</data>
+	<data name="ListView" xml:space="preserve">
+		<value>List View</value>
+	</data>
+	<data name="SlotAlreadyBooked" xml:space="preserve">
+		<value>Oops! This slot is already booked</value>
+	</data>
+	<data name="BookingExpired" xml:space="preserve">
+		<value>Booking Expired</value>
+	</data>
+	<data name="SortBy" xml:space="preserve">
+		<value>SortBy</value>
+	</data>
+	<data name="Filter" xml:space="preserve">
+		<value>Filter</value>
+	</data>
+	<data name="ContinueBooking" xml:space="preserve">
+		<value>Continue Booking</value>
+	</data>
+	<data name="GoBackPrompt" xml:space="preserve">
+		<value>Are you sure to you want to go back?</value>
+	</data>
+	<data name="ContinueCharging " xml:space="preserve">
+		<value>Continue Charging</value>
+	</data>
+
+	<data name="SelectOtherSlot" xml:space="preserve">
+		<value>Your time to confirm this booking has expired. Please check slot availability again and re-try booking a space.</value>
+	</data>
+
+	<data name="StopChargeWarning" xml:space="preserve">
+		<value>Do you still want to stop charging? This can’t be undone.</value>
+	</data>
+	<data name="StopChargePrompt" xml:space="preserve">
+		<value>Are you sure you want to stop charging?</value>
+	</data>
+
+    <data name="NoPreviousBooking" xml:space="preserve">
+		<value>No previous booking</value>
+	</data>
+	<data name="EventAdded" xml:space="preserve">
+		<value>Event added to calender</value>
+    </data>
+</root>

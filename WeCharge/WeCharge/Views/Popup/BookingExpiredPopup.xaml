@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                  x:Class="WeCharge.Views.Popup.BookingExpiredPopup"
+                     xmlns:resx="clr-namespace:WeCharge.Resources"
+                  xmlns:theme="clr-namespace:WeCharge.Theme"
+                 xmlns:local="clr-namespace:WeCharge.CustomControls"
+                  BackgroundColor="Transparent">
+    <StackLayout Padding="20,0" BackgroundColor="{StaticResource PopupOverlayColor}">
+        <Frame Style="{StaticResource PopupStyle}"
+           VerticalOptions="CenterAndExpand"
+           HorizontalOptions="Center">
+            <Grid ColumnDefinitions="*,auto,auto" RowDefinitions="auto,auto,auto">
+                <Label VerticalOptions="Start" HorizontalOptions="Start" Grid.Column="0" Grid.Row="0" Text="{Binding Source={x:Static resx:AppLanguage.BookingExpired}}" Style="{StaticResource HeadingText}" FontSize="16" FontAttributes="Bold"/>
+                <Label HorizontalOptions="End" Grid.Column="1" Grid.Row="0" TextColor="{StaticResource EntryTextColor}" Text="{Binding Source={x:Static theme:FontIcons.Exit}}" FontSize="16" Style="{StaticResource IconLabelRegular}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ExitTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label HorizontalOptions="Start" Margin="0,0,0,0" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" FontSize="14" Style="{StaticResource PopupLabelStyle}" Text="{Binding Source={x:Static resx:AppLanguage.SelectOtherSlot}}"/>
+                <Button Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" x:Name="KeepBooking" Text="{Binding Source={x:Static resx:AppLanguage.Continue}}" Style="{StaticResource PrimaryRegularButtonStyle}"  FontSize="16" HorizontalOptions="FillAndExpand" Clicked="ContinueButtonClicked"/>
+            </Grid>
+        </Frame>
+    </StackLayout>
+</pages:PopupPage>
