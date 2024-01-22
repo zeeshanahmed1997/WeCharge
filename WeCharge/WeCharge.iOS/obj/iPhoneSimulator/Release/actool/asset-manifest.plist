@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>com.apple.actool.compilation-results</key>
+	<dict>
+		<key>output-files</key>
+		<array>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/bundle/AppIcon20x20@2x.png</string>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/bundle/AppIcon20x20@2x~ipad.png</string>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/bundle/AppIcon20x20@3x.png</string>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/bundle/AppIcon20x20~ipad.png</string>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/bundle/AppIcon29x29@2x.png</string>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/bundle/AppIcon29x29@2x~ipad.png</string>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/bundle/AppIcon29x29@3x.png</string>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/bundle/AppIcon29x29~ipad.png</string>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/bundle/AppIcon40x40@2x.png</string>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/bundle/AppIcon40x40@2x~ipad.png</string>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/bundle/AppIcon40x40@3x.png</string>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/bundle/AppIcon40x40~ipad.png</string>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/bundle/AppIcon60x60@2x.png</string>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/bundle/AppIcon60x60@3x.png</string>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/bundle/AppIcon76x76@2x~ipad.png</string>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/bundle/AppIcon76x76~ipad.png</string>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/bundle/AppIcon83.5x83.5@2x~ipad.png</string>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/bundle/Assets.car</string>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/partial-info.plist</string>
+		</array>
+	</dict>
+	<key>com.apple.actool.document.warnings</key>
+	<array>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][ipad][38x38][][][2x][][][][2d][Icon76.png]</string>
+				<string>./AppIcon.appiconset/[][ipad][40x40][][][3x][][][][2d][Icon120.png]</string>
+				<string>./AppIcon.appiconset/[][iphone][38x38][][][2x][][][][2d][Icon76.png]</string>
+				<string>./AppIcon.appiconset/[][iphone][38x38][][][3x][][][][2d][Icon114.png]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The app icon set "AppIcon" has 4 unassigned children.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][mac][256x256][][][2x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The file "Icon512.png" for the image set "AppIcon" does not exist.</string>
+			<key>type</key>
+			<string>Missing Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][mac][512x512][][][1x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The file "Icon512 1.png" for the image set "AppIcon" does not exist.</string>
+			<key>type</key>
+			<string>Missing Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][iphone][38x38][][][3x][][][][2d][Icon114.png]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The file "Icon114.png" for the image set "AppIcon" does not exist.</string>
+			<key>type</key>
+			<string>Missing Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][mac][16x16][][][1x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The file "Icon16.png" for the image set "AppIcon" does not exist.</string>
+			<key>type</key>
+			<string>Missing Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][mac][16x16][][][2x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The file "Icon32.png" for the image set "AppIcon" does not exist.</string>
+			<key>type</key>
+			<string>Missing Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][mac][32x32][][][1x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The file "Icon32.png" for the image set "AppIcon" does not exist.</string>
+			<key>type</key>
+			<string>Missing Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][mac][32x32][][][2x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The file "Icon64.png" for the image set "AppIcon" does not exist.</string>
+			<key>type</key>
+			<string>Missing Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][mac][128x128][][][1x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The file "Icon128.png" for the image set "AppIcon" does not exist.</string>
+			<key>type</key>
+			<string>Missing Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][mac][128x128][][][2x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The file "Icon256.png" for the image set "AppIcon" does not exist.</string>
+			<key>type</key>
+			<string>Missing Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][mac][256x256][][][1x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The file "Icon256.png" for the image set "AppIcon" does not exist.</string>
+			<key>type</key>
+			<string>Missing Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][ipad][38x38][][][2x][][][][2d][Icon76.png]</string>
+				<string>./AppIcon.appiconset/[][ipad][40x40][][][3x][][][][2d][Icon120.png]</string>
+				<string>./AppIcon.appiconset/[][iphone][38x38][][][2x][][][][2d][Icon76.png]</string>
+				<string>./AppIcon.appiconset/[][iphone][38x38][][][3x][][][][2d][Icon114.png]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The app icon set "AppIcon" has 4 unassigned children.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][mac][256x256][][][1x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The file "Icon256.png" for the image set "AppIcon" does not exist.</string>
+			<key>type</key>
+			<string>Missing Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][mac][512x512][][][1x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The file "Icon512 1.png" for the image set "AppIcon" does not exist.</string>
+			<key>type</key>
+			<string>Missing Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][mac][256x256][][][2x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The file "Icon512.png" for the image set "AppIcon" does not exist.</string>
+			<key>type</key>
+			<string>Missing Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][mac][16x16][][][1x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The file "Icon16.png" for the image set "AppIcon" does not exist.</string>
+			<key>type</key>
+			<string>Missing Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][iphone][38x38][][][3x][][][][2d][Icon114.png]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The file "Icon114.png" for the image set "AppIcon" does not exist.</string>
+			<key>type</key>
+			<string>Missing Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][mac][16x16][][][2x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The file "Icon32.png" for the image set "AppIcon" does not exist.</string>
+			<key>type</key>
+			<string>Missing Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][mac][32x32][][][1x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The file "Icon32.png" for the image set "AppIcon" does not exist.</string>
+			<key>type</key>
+			<string>Missing Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][mac][32x32][][][2x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The file "Icon64.png" for the image set "AppIcon" does not exist.</string>
+			<key>type</key>
+			<string>Missing Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][mac][128x128][][][1x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The file "Icon128.png" for the image set "AppIcon" does not exist.</string>
+			<key>type</key>
+			<string>Missing Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][mac][128x128][][][2x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/Devbasis/GitHub/evcharge-mobile-app/WeCharge/WeCharge.iOS/obj/iPhoneSimulator/Release/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The file "Icon256.png" for the image set "AppIcon" does not exist.</string>
+			<key>type</key>
+			<string>Missing Content</string>
+		</dict>
+	</array>
+</dict>
+</plist>
